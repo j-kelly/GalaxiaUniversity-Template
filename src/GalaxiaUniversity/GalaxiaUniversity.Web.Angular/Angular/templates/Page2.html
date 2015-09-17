@@ -1,0 +1,33 @@
+﻿
+
+Filter: <input ng-model="filter" />
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Index</th>
+            <th><a href="" ng-click="orderTable('country')">Country</a></th>
+            <th><a href="" ng-click="orderTable('population')">Population</a></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr ng-repeat="item in countries | filter:filter | orderBy:sortField:reverse">
+            <td>{{$index}}</td>
+            <td>{{item.country}}</td>
+            <td>{{item.population}}</td>
+        </tr>
+    </tbody>
+</table>
+
+{{time}}
+<div clock time="time"></div>
+
+<my-header2 filter="filter"></my-header2>
+
+<div my-header title="hello"> THIES ARE THE CONTENTS</div>
+<ul>
+    <li ng-repeat="item in filterList">
+        {{item}}
+    </li>
+</ul>
