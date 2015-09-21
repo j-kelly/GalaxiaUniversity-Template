@@ -8,7 +8,7 @@ namespace WebApplication1
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
-            GlobalConfiguration.Configure(WebApiConfig.Register);
+            GlobalConfiguration.Configure(GalaxiaUniversity.Web.Angular.App_Start.WebApiConfig.Register);
 
             GlobalConfiguration.Configuration.Formatters.Remove(GlobalConfiguration.Configuration.Formatters.XmlFormatter);
         }

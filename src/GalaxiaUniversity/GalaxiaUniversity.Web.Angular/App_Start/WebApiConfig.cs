@@ -1,4 +1,4 @@
-﻿namespace WebApplication1
+﻿namespace GalaxiaUniversity.Web.Angular.App_Start
 {
     using Newtonsoft.Json.Converters;
     using System;

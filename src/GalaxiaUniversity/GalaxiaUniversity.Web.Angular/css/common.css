@@ -1,0 +1,18 @@
+﻿
+body {
+  text-align: center;
+  /*background-image: url("http://snazaroo.northwind.co.uk/images/fancybox_sprite.png");*/
+ }
+
+#page-wrap {
+  text-align: left;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+#logo{
+    margin:20px;
+    display: block; 
+    margin-left: auto;
+    margin-right: auto ;
+}

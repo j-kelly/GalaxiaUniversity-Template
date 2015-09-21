@@ -67,10 +67,10 @@
     <Compile Include="Repository\Cache\EfCacheableFactoryQuery.cs" />
     <Compile Include="Repository\Cache\ICacheableProjection.cs" />
     <Compile Include="Repository\Interceptors\GalaxiaUniversityQueryInterceptor.cs" />
+    <Compile Include="Repository\Projections\CountryBySql.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Repository\GlobalFilters\" />
-    <Folder Include="Repository\Projections\" />
     <Folder Include="Repository\Strategies\" />
   </ItemGroup>
   <ItemGroup>

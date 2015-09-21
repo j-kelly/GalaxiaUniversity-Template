@@ -2,6 +2,7 @@
 {
     using Cache;
     using NRepository.Core.Query.Interceptors.Factories;
+    using Projections;
     using System.Collections.Generic;
 
     public class GalaxiaUniversityQueryInterceptor : FactoryQueryInterceptor
@@ -13,6 +14,7 @@
             new CacheableProjectionFactoryQuery(),
 
             // Projections
+            new CountryBySql.FactoryQuery()
 
             // Filters
         };

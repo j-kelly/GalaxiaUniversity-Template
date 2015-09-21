@@ -18,7 +18,7 @@
 	var assemblies = new[]
     {
         typeof(GalaxiaUniversity.Domain.AppServices.Services.ExamplesHandlers.AddNewCountryHandler).Assembly,
-        typeof(GalaxiaUniversity.Web.Angular.Controllers.CountryController).Assembly,
+        typeof(GalaxiaUniversity.Web.Angular.Controllers.MainController).Assembly,
     };
 try
 {

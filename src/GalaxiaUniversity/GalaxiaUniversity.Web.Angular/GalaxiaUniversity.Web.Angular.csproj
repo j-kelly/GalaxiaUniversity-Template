@@ -15,7 +15,7 @@
     <AssemblyName>GalaxiaUniversity.Web.Angular</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -206,7 +206,7 @@
   <ItemGroup>
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="ApiControllers\CountryController.cs" />
+    <Compile Include="ApiControllers\MainController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -214,13 +214,16 @@
     <Compile Include="App_Start\Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Angular\Content\Home.html" />
-    <Content Include="Angular\Content\Page1.html" />
-    <Content Include="Angular\simpleController.js" />
-    <Content Include="Angular\MainApp.js" />
-    <Content Include="Angular\templates\default.html" />
-    <Content Include="Angular\templates\Page3.html" />
-    <Content Include="Angular\templates\Page2.html" />
+    <Content Include="Angular\masterMainMenu.html" />
+    <Content Include="css\common.css" />
+    <Content Include="Angular\Features\Books\index.html" />
+    <Content Include="Angular\Features\Books\controller.js" />
+    <Content Include="Angular\Features\FrontPage\index.html" />
+    <Content Include="Angular\Features\Products\controller.js" />
+    <Content Include="Angular\Features\Products\index.html" />
+    <Content Include="Angular\master.html" />
+    <Content Include="Angular\masterController.js" />
+    <Content Include="Angular\main.js" />
     <Content Include="Global.asax" />
     <Content Include="Index.html" />
     <Content Include="Web.config" />
@@ -253,8 +256,8 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Angular\Features\Security\" />
-    <Folder Include="Angular\Features\ShoppingCart\" />
+    <Folder Include="Angular\templates\" />
+    <Folder Include="Angular\_Master\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -270,16 +273,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
-          <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>56674</DevelopmentServerPort>
-          <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:56674/</IISUrl>
-          <NTLMAuthentication>False</NTLMAuthentication>
-          <UseCustomServer>False</UseCustomServer>
-          <CustomServerUrl>
-          </CustomServerUrl>
-          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+          <SaveServerSettingsInUserFile>True</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
     </VisualStudio>

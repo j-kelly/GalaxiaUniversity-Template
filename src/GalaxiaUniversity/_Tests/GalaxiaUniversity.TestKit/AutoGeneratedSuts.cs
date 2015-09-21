@@ -101,16 +101,16 @@ namespace GalaxiaUniversity.TestKit.Factories
 
 
     // Auto generated
-    public partial class CountryControllerFactory
+    public partial class MainControllerFactory
     {
         private readonly MockBehavior _MockBehaviour;
 
-        public CountryControllerFactory()
+        public MainControllerFactory()
                     : this(MockBehavior.Default)
         {
         }
 
-        public CountryControllerFactory(MockBehavior mockBehaviour)
+        public MainControllerFactory(MockBehavior mockBehaviour)
         {
             _MockBehaviour = mockBehaviour;
 
@@ -134,11 +134,11 @@ namespace GalaxiaUniversity.TestKit.Factories
         public IExamplesApplicationService _GetExamplesApplicationService() { return _IExamplesApplicationService ?? ExamplesApplicationServiceMock.Object; }
         public IExamplesApplicationService _SetExamplesApplicationService(IExamplesApplicationService obj) { _IExamplesApplicationService = obj; return obj; }
 
-        public CountryController Object
+        public MainController Object
         {
             get
             {
-                return new CountryController(_GetQueryRepository(), _GetExamplesApplicationService());
+                return new MainController(_GetQueryRepository(), _GetExamplesApplicationService());
             }
         }
 
