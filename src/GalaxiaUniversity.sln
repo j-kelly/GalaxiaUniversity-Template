@@ -27,6 +27,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GalaxiaUniversity.Web.Core"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GalaxiaUniversity.Web.Angular", "GalaxiaUniversity\GalaxiaUniversity.Web.Angular\GalaxiaUniversity.Web.Angular.csproj", "{1374764A-6D91-4884-A1D3-243D81E2F05B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Solution Items", "_Solution Items", "{A331772C-944C-4792-AECC-321EE4595556}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Snippets", "Snippets", "{A1C63678-A3E1-49D2-8DF6-24D0C7753AD0}"
+	ProjectSection(SolutionItems) = preProject
+		Snippets\DomainBehaviour.snippet = Snippets\DomainBehaviour.snippet
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -82,5 +89,6 @@ Global
 		{3CC91B56-46DF-431A-BC6A-C7B365FCA2A9} = {B5604F2F-DFE7-41C1-88D9-A8E41612EB24}
 		{5DC8F1D0-D8CE-41CE-A2CE-1C2B7EEE8086} = {445C8ECB-3E09-4630-A762-B13FD8F3330E}
 		{1374764A-6D91-4884-A1D3-243D81E2F05B} = {445C8ECB-3E09-4630-A762-B13FD8F3330E}
+		{A1C63678-A3E1-49D2-8DF6-24D0C7753AD0} = {A331772C-944C-4792-AECC-321EE4595556}
 	EndGlobalSection
 EndGlobal
