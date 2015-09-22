@@ -5,24 +5,24 @@ app.config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when('/', {
         title: 'Index',
         controller: function () { },
-        templateUrl: 'angular/Features/FrontPage/index.html',
+        templateUrl: 'angular/features/FrontPage/index.html',
     }).when('/Products', {
         title: 'Products',
         controller: 'productsController',
-        templateUrl: 'angular/Features/Products/index.html',
+        templateUrl: 'angular/features/Products/index.html',
         caseInsensitiveMatch: true
     }).when('/Products/:code', {
         title: 'Products',
         controller: 'productsController',
-        templateUrl: 'angular/Features/Products/index.html',
+        templateUrl: 'angular/features/Products/index.html',
         caseInsensitiveMatch: true
     }).when('/Books', {
         controller: 'bookController',
-        templateUrl: 'angular/Features/Books/index.html',
+        templateUrl: 'angular/features/Books/index.html',
         caseInsensitiveMatch: true
     }).when('/Books/:isbn', {
         controller: 'bookController',
-        templateUrl: 'angular/Features/Books/index.html',
+        templateUrl: 'angular/features/Books/index.html',
         caseInsensitiveMatch: true
     }).otherwise({ redirectTo: '/' });
 }]);

@@ -214,15 +214,15 @@
     <Compile Include="App_Start\Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Angular\masterMainMenu.html" />
+    <Content Include="Angular\masterPage\topMenu.html" />
     <Content Include="css\common.css" />
-    <Content Include="Angular\Features\Books\index.html" />
-    <Content Include="Angular\Features\Books\controller.js" />
-    <Content Include="Angular\Features\FrontPage\index.html" />
-    <Content Include="Angular\Features\Products\controller.js" />
-    <Content Include="Angular\Features\Products\index.html" />
-    <Content Include="Angular\master.html" />
-    <Content Include="Angular\masterController.js" />
+    <Content Include="Angular\features\Books\index.html" />
+    <Content Include="Angular\features\Books\controller.js" />
+    <Content Include="Angular\features\FrontPage\index.html" />
+    <Content Include="Angular\features\Products\controller.js" />
+    <Content Include="Angular\features\Products\index.html" />
+    <Content Include="Angular\masterPage\master.html" />
+    <Content Include="Angular\masterPage\masterController.js" />
     <Content Include="Angular\main.js" />
     <Content Include="Global.asax" />
     <Content Include="Index.html" />
@@ -257,7 +257,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Angular\templates\" />
-    <Folder Include="Angular\_Master\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
