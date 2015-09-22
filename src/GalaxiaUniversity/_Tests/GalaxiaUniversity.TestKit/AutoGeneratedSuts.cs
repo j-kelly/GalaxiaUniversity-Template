@@ -8,145 +8,136 @@
  * ************************************************************/
 namespace GalaxiaUniversity.TestKit.Factories
 {
-    using GalaxiaUniversity.Domain.AppServices.Services;
-    using GalaxiaUniversity.Domain.AppServices.Services.ExamplesHandlers;
-    using GalaxiaUniversity.Domain.Core.Behaviours;
-    using GalaxiaUniversity.Web.Angular.Controllers;
     using Moq;
-    using NRepository.Core;
-    using NRepository.Core.Query;
+	using GalaxiaUniversity.Domain.AppServices.Services;
+	using GalaxiaUniversity.Domain.AppServices.Services.ExamplesHandlers;
+	using GalaxiaUniversity.Domain.Core.Behaviours;
+	using GalaxiaUniversity.Web.Angular.Controllers;
+	using NRepository.Core;
+	using NRepository.Core.Query;
 
     // Auto generated
-    public partial class ExamplesApplicationServiceFactory
-    {
+	public partial class ExamplesApplicationServiceFactory
+	{
         private readonly MockBehavior _MockBehaviour;
 
-        public ExamplesApplicationServiceFactory()
-                    : this(MockBehavior.Default)
+		public ExamplesApplicationServiceFactory()
+            : this(MockBehavior.Default)
         {
-        }
+		}
 
-        public ExamplesApplicationServiceFactory(MockBehavior mockBehaviour)
+		public ExamplesApplicationServiceFactory(MockBehavior mockBehaviour)
         {
-            _MockBehaviour = mockBehaviour;
+			_MockBehaviour = mockBehaviour;
 
-            RepositoryMock = new Mock<IRepository>(_MockBehaviour);
+        	RepositoryMock = new Mock<IRepository>(_MockBehaviour);
+		
+			Initalise();
+		}
 
-            Initalise();
-        }
+		partial void Initalise();
 
-        partial void Initalise();
-
-        // IRepository
-        private IRepository _IRepository;
+		// IRepository
+		private IRepository _IRepository;
         public Mock<IRepository> RepositoryMock { get; set; }
         public IRepository _GetRepository() { return _IRepository ?? RepositoryMock.Object; }
-        public IRepository _SetRepository(IRepository obj) { _IRepository = obj; return obj; }
+	    public IRepository _SetRepository(IRepository obj){ _IRepository = obj; return obj;}
 
-        public ExamplesApplicationService Object
+	    public ExamplesApplicationService  Object
         {
-            get
-            {
-                return new ExamplesApplicationService(_GetRepository());
-            }
-        }
+			get { return new ExamplesApplicationService(_GetRepository()); }
+		}
 
-        public void VerifyAll()
+		public void VerifyAll()
         {
-            RepositoryMock.VerifyAll();
-        }
-    }
+			RepositoryMock.VerifyAll();
+		}
+	}
 
 
     // Auto generated
-    public partial class AddNewCountryHandlerFactory
-    {
+	public partial class AddNewCountryHandlerFactory
+	{
         private readonly MockBehavior _MockBehaviour;
 
-        public AddNewCountryHandlerFactory()
-                    : this(MockBehavior.Default)
+		public AddNewCountryHandlerFactory()
+            : this(MockBehavior.Default)
         {
-        }
+		}
 
-        public AddNewCountryHandlerFactory(MockBehavior mockBehaviour)
+		public AddNewCountryHandlerFactory(MockBehavior mockBehaviour)
         {
-            _MockBehaviour = mockBehaviour;
+			_MockBehaviour = mockBehaviour;
 
-            RepositoryMock = new Mock<IRepository>(_MockBehaviour);
+        	RepositoryMock = new Mock<IRepository>(_MockBehaviour);
+		
+			Initalise();
+		}
 
-            Initalise();
-        }
+		partial void Initalise();
 
-        partial void Initalise();
-
-        // IRepository
-        private IRepository _IRepository;
+		// IRepository
+		private IRepository _IRepository;
         public Mock<IRepository> RepositoryMock { get; set; }
         public IRepository _GetRepository() { return _IRepository ?? RepositoryMock.Object; }
-        public IRepository _SetRepository(IRepository obj) { _IRepository = obj; return obj; }
+	    public IRepository _SetRepository(IRepository obj){ _IRepository = obj; return obj;}
 
-        public AddNewCountryHandler Object
+	    public AddNewCountryHandler  Object
         {
-            get
-            {
-                return new AddNewCountryHandler(_GetRepository());
-            }
-        }
+			get { return new AddNewCountryHandler(_GetRepository()); }
+		}
 
-        public void VerifyAll()
+		public void VerifyAll()
         {
-            RepositoryMock.VerifyAll();
-        }
-    }
+			RepositoryMock.VerifyAll();
+		}
+	}
 
 
     // Auto generated
-    public partial class MainControllerFactory
-    {
+	public partial class MainControllerFactory
+	{
         private readonly MockBehavior _MockBehaviour;
 
-        public MainControllerFactory()
-                    : this(MockBehavior.Default)
+		public MainControllerFactory()
+            : this(MockBehavior.Default)
         {
-        }
+		}
 
-        public MainControllerFactory(MockBehavior mockBehaviour)
+		public MainControllerFactory(MockBehavior mockBehaviour)
         {
-            _MockBehaviour = mockBehaviour;
+			_MockBehaviour = mockBehaviour;
 
-            QueryRepositoryMock = new Mock<IQueryRepository>(_MockBehaviour);
-            ExamplesApplicationServiceMock = new Mock<IExamplesApplicationService>(_MockBehaviour);
+        	QueryRepositoryMock = new Mock<IQueryRepository>(_MockBehaviour);
+			ExamplesApplicationServiceMock = new Mock<IExamplesApplicationService>(_MockBehaviour);
+		
+			Initalise();
+		}
 
-            Initalise();
-        }
+		partial void Initalise();
 
-        partial void Initalise();
-
-        // IQueryRepository
-        private IQueryRepository _IQueryRepository;
+		// IQueryRepository
+		private IQueryRepository _IQueryRepository;
         public Mock<IQueryRepository> QueryRepositoryMock { get; set; }
         public IQueryRepository _GetQueryRepository() { return _IQueryRepository ?? QueryRepositoryMock.Object; }
-        public IQueryRepository _SetQueryRepository(IQueryRepository obj) { _IQueryRepository = obj; return obj; }
+	    public IQueryRepository _SetQueryRepository(IQueryRepository obj){ _IQueryRepository = obj; return obj;}
 
-        // IExamplesApplicationService
-        private IExamplesApplicationService _IExamplesApplicationService;
+		// IExamplesApplicationService
+		private IExamplesApplicationService _IExamplesApplicationService;
         public Mock<IExamplesApplicationService> ExamplesApplicationServiceMock { get; set; }
         public IExamplesApplicationService _GetExamplesApplicationService() { return _IExamplesApplicationService ?? ExamplesApplicationServiceMock.Object; }
-        public IExamplesApplicationService _SetExamplesApplicationService(IExamplesApplicationService obj) { _IExamplesApplicationService = obj; return obj; }
+	    public IExamplesApplicationService _SetExamplesApplicationService(IExamplesApplicationService obj){ _IExamplesApplicationService = obj; return obj;}
 
-        public MainController Object
+	    public MainController  Object
         {
-            get
-            {
-                return new MainController(_GetQueryRepository(), _GetExamplesApplicationService());
-            }
-        }
+			get { return new MainController(_GetQueryRepository(), _GetExamplesApplicationService()); }
+		}
 
-        public void VerifyAll()
+		public void VerifyAll()
         {
-            QueryRepositoryMock.VerifyAll();
-            ExamplesApplicationServiceMock.VerifyAll();
-        }
-    }
+			QueryRepositoryMock.VerifyAll();
+			ExamplesApplicationServiceMock.VerifyAll();
+		}
+	}
 
 }

@@ -60,23 +60,23 @@ sortedNamesapces.Sort();
 	{
         private readonly MockBehavior _MockBehaviour;
 
-public <#= type.Name #>Factory()
+		public <#= type.Name #>Factory()
             : this(MockBehavior.Default)
         {
-}
+		}
 
-public <#= type.Name #>Factory(MockBehavior mockBehaviour)
+		public <#= type.Name #>Factory(MockBehavior mockBehaviour)
         {
-    _MockBehaviour = mockBehaviour;
+			_MockBehaviour = mockBehaviour;
 
         <# type.GetConstructors().First().GetParameters().ToList().ForEach(param => {#>
 	<#= param.ParameterType.Name.Substring(1) #>Mock = new Mock<<#= param.ParameterType.Name #>>(_MockBehaviour);
 		<#});#>
 
 			Initalise();
-}
+		}
 
-partial void Initalise();
+		partial void Initalise();
 
 	<# type.GetConstructors().First().GetParameters().ToList().ForEach(param => {#>
 	// <#= param.ParameterType.Name #>
@@ -89,13 +89,10 @@ partial void Initalise();
 	<#});#>
     public <#= type.Name #>  Object
         {
-    get
-            {
-        return new <#= type.Name #>(<#= string.Join(", ", type.GetConstructors().First().GetParameters().Select(p => string.Format("_Get{0}()",p.ParameterType.Name.Substring(1)))) #>);
-			}
-}
+			get { return new <#= type.Name #>(<#= string.Join(", ", type.GetConstructors().First().GetParameters().Select(p => string.Format("_Get{0}()",p.ParameterType.Name.Substring(1)))) #>); }
+		}
 
-public void VerifyAll()
+		public void VerifyAll()
         {
 <# type.GetConstructors().First().GetParameters().ToList().ForEach(param => {#>
 			<#= param.ParameterType.Name.Substring(1) #>Mock.VerifyAll();
@@ -108,7 +105,6 @@ public void VerifyAll()
 }
 catch (ReflectionTypeLoadException ex)
 { #> 
-
  Exception thrown: <#= ex.ToString() + Environment.NewLine #> 
 
  Loader Exceptions: <# 
@@ -121,5 +117,4 @@ catch (ReflectionTypeLoadException ex)
 catch(Exception ex)
 {
 #>Exception thrown: <#= ex.ToString() #> 
-
 <#}#>
