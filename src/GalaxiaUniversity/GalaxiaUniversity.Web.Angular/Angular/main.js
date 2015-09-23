@@ -44,6 +44,14 @@ app.factory('WebApi', function ($http) {
           error(onFailure);
     };
 
+    factory.saveStuff = function (commandModel, onSuccess, onFailure) {
+        $http.post(
+          urlBase + 'SaveStuff',
+          JSON.stringify(commandModel), { headers: { 'Content-Type': 'application/json' } }      ).
+          success(onSuccess).
+          error(onFailure);
+    };
+
     return factory;
 });
 

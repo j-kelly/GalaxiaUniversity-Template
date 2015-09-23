@@ -22,6 +22,15 @@ app.controller('masterController', ['$scope', '$routeParams', '$cookies', 'WebAp
             function () { alert('failed'); })
     }
 
+    $scope.saveStuff = function (id, name) {
+        _WebApi.saveStuff(
+            {id:id, name:name },
+            function() {  },
+            function () { alert('failed'); })
+    }
+
+
+
     // debugger func
     $scope.alert = function (msg) {
         alert(msg);
