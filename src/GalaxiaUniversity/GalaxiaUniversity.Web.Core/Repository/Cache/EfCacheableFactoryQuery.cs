@@ -11,7 +11,7 @@
     /// <summary>
     /// Used to cache entities found in the database
     /// </summary>
-    public class EfCacheableFactoryQuery : FactoryQuery<ICacheable>
+    internal class EfCacheableFactoryQuery : FactoryQuery<ICacheable>
     {
         private static readonly object SyncObject = new object();
         private static readonly MemoryCache Cache = MemoryCache.Default;

@@ -5,7 +5,7 @@
     using Projections;
     using System.Collections.Generic;
 
-    public class GalaxiaUniversityQueryInterceptor : FactoryQueryInterceptor
+    internal class GalaxiaUniversityQueryInterceptor : FactoryQueryInterceptor
     {
         private static readonly IEnumerable<IFactoryQuery> AllQueryFactories = new IFactoryQuery[]
         {

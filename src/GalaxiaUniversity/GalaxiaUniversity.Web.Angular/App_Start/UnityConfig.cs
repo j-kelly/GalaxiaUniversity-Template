@@ -1,9 +1,9 @@
 namespace GalaxiaUniversity.Web.Angular
 {
+    using Core.Repository;
     using GalaxiaUniversity.Domain.AppServices.Services;
     using GalaxiaUniversity.Domain.Core.Behaviours;
     using GalaxiaUniversity.Domain.Core.Repository;
-    using Core.Repository.Interceptors;
     using Microsoft.Practices.Unity;
     using NRepository.Core;
     using NRepository.Core.Query;
@@ -20,10 +20,7 @@ namespace GalaxiaUniversity.Web.Angular
             GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(container);
 
             // Queries only
-            container.RegisterType<IQueryRepository, EntityFrameworkQueryRepository>();
-            container.RegisterType<EntityFrameworkQueryRepository>(new InjectionConstructor(
-                typeof(GalaxiaUniversityDbContext),
-                typeof(GalaxiaUniversityQueryInterceptor)));
+            container.RegisterType<IQueryRepository, GalaxiaUniversityWebQueryRepository>();
 
             // Queries and commands
             container.RegisterType<IRepository, EntityFrameworkRepository>();

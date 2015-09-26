@@ -8,7 +8,7 @@ namespace GalaxiaUniversity.Web.Core.Repository.Cache
     /// <summary>
     /// Used to cache projections
     /// </summary>
-    public class CacheableProjectionFactoryQuery : FactoryQuery<GalaxiaUniversity.Web.Core.Repository.Cache.ICacheableProjection>
+    internal class CacheableProjectionFactoryQuery : FactoryQuery<ICacheableProjection>
     {
         private static readonly object SyncObject = new object();
         private static readonly MemoryCache Cache = MemoryCache.Default;

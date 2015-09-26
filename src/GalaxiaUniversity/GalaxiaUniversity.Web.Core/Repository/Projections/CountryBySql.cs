@@ -7,7 +7,7 @@
 
     public class CountryBySql
     {
-        public class FactoryQuery : FactoryQuery<CountryBySql>
+        internal class FactoryQuery : FactoryQuery<CountryBySql>
         {
             public override IQueryable<object> Query<TEntity>(IQueryRepository repository, object additionalQueryData)
             {

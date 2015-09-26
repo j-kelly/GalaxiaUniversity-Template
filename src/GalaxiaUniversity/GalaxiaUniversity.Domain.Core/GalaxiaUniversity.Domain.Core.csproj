@@ -87,6 +87,8 @@
     <Folder Include="Factories\" />
     <Folder Include="Repository\Enums\" />
     <Folder Include="ValueTypes\" />
+    <Folder Include="_Infrastructure\Extensions\" />
+    <Folder Include="_Infrastructure\Helpers\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Repository\Migrations\201509171636400_Initial.resx">

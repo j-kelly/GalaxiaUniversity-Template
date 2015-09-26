@@ -66,12 +66,15 @@
     <Compile Include="Repository\Cache\CacheableProjectionFactoryQuery.cs" />
     <Compile Include="Repository\Cache\EfCacheableFactoryQuery.cs" />
     <Compile Include="Repository\Cache\ICacheableProjection.cs" />
+    <Compile Include="Repository\GalaxiaUniversityWebQueryRepository.cs" />
     <Compile Include="Repository\Interceptors\GalaxiaUniversityQueryInterceptor.cs" />
     <Compile Include="Repository\Projections\CountryBySql.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Repository\GlobalFilters\" />
     <Folder Include="Repository\Strategies\" />
+    <Folder Include="_Infrastructure\Extensions\" />
+    <Folder Include="_Infrastructure\Helpers\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
