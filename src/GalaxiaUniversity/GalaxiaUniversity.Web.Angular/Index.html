@@ -2,32 +2,33 @@
 <html lang="en" ng-app="myApp" ng-init="initialise()">
 <head>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css" />
+
+    <!-- My stuff-->
+    <link href="/Content/Site.css" rel="stylesheet" />
 
     <meta charset="utf-8" />
 
 </head>
 <body>
 
-    <div id="page-wrap">
-        <div ng-include="'/angular/masterPage/master.html'"></div>
+    <div class="container">
+        <div ng-include="'/content/angular/masterPage/master.html'"></div>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-route.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-resource.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-cookies.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
-    <script src="http://code.jquery.com/jquery.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 
     <!-- My stuff-->
-    <script src="Angular/main.js" ng-module="app"></script>
-    <script src="Angular/masterPage/masterController.js" ng-module="myApp"></script>
-    <script src="Angular/Features/Books/controller.js" ng-module="myApp"></script>
-    <script src="Angular/Features/Products/controller.js" ng-module="myApp"></script>
-
+    <script src="Content/Angular/main.js" ng-module="app"></script>
+    <script src="Content/Angular/masterPage/masterController.js" ng-module="myApp"></script>
+    <script src="Content/Angular/Features/Books/controller.js" ng-module="myApp"></script>
+    <script src="Content/Angular/Features/Products/controller.js" ng-module="myApp"></script>
 </body>
 </html>

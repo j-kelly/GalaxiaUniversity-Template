@@ -214,18 +214,22 @@
     <Compile Include="App_Start\Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Angular\masterPage\topMenu.html" />
-    <Content Include="css\common.css" />
-    <Content Include="Angular\features\Books\index.html" />
-    <Content Include="Angular\features\Books\controller.js" />
-    <Content Include="Angular\features\FrontPage\index.html" />
-    <Content Include="Angular\features\Products\controller.js" />
-    <Content Include="Angular\features\Products\index.html" />
-    <Content Include="Angular\masterPage\master.html" />
-    <Content Include="Angular\masterPage\masterController.js" />
-    <Content Include="Angular\main.js" />
+    <Content Include="content\Angular\masterPage\navBar.html" />
+    <Content Include="content\Angular\features\Books\index.html" />
+    <Content Include="content\Angular\features\Books\controller.js" />
+    <Content Include="content\Angular\features\FrontPage\index.html" />
+    <Content Include="content\Angular\features\Products\controller.js" />
+    <Content Include="content\Angular\features\Products\index.html" />
+    <Content Include="content\Angular\masterPage\master.html" />
+    <Content Include="content\Angular\masterPage\masterController.js" />
+    <Content Include="content\Angular\main.js" />
     <Content Include="Global.asax" />
+    <Content Include="gulpfile.js" />
     <Content Include="Index.html" />
+    <Content Include="content\Site.css" />
+    <Content Include="bower.json" />
+    <Content Include="package.json" />
+    <None Include="scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -256,10 +260,7 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Angular\templates\" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
+    <Folder Include="content\Angular\templates\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
