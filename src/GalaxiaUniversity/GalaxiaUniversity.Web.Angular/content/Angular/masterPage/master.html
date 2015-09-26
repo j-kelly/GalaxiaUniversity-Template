@@ -1,6 +1,13 @@
 ﻿<div ng-controller="masterController" ng-init="initialise()">
 
-    <div ng-include="'content/angular/masterPage/navBar.html'"></div>
 
+    <div ng-include="'content/angular/masterPage/navBar.html'"></div>
     <ng-view></ng-view>
+
+    <div
+        <ul>
+            <li ng-repeat="country in main.countries | filter:main.filter">{{country.name}} ({{country.population}})</li>
+        </ul>
+    </div>
+
 </div>
