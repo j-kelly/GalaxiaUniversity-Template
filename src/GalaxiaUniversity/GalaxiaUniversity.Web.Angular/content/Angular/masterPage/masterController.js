@@ -17,9 +17,9 @@ app.controller('masterController', ['$scope', '$routeParams', '$cookies', 'WebAp
 
 
     $scope.initialise = function () {
-        _WebApi.startUp(
-            function (data) { $scope.main = data; },
-            function () { alert('failed'); })
+        //_WebApi.startUp(
+        //    function (data) { $scope.main = data; },
+        //    function () { alert('failed'); })
     }
 
     $scope.saveStuff = function (id, name) {

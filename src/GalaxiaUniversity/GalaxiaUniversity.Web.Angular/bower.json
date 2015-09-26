@@ -1,0 +1,30 @@
+{
+  "name": "GalaxiaUniversity.Web.Angular",
+  "version": "0.0.0",
+  "homepage": "https://github.com/j-kelly/GalaxiaUniversity",
+  "authors": [
+    "john kelly <jk>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [ ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "angular": "~1.4.6",
+    "angular-resource": "1.4.6",
+    "angular-route": "1.4.6",
+    "angular-cookies": "1.4.6",
+    "underscore": "1.8.3"
+  },
+  "devDependencies": {
+    "gulp": "3.9.0"
+  }
+}
