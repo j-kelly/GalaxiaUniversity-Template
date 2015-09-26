@@ -15,7 +15,6 @@
 
         static GalaxiaUniversityDbContext()
         {
-            Database.SetInitializer(new GalaxiaUniversityDbInitializer());
         }
 
         public GalaxiaUniversityDbContext()

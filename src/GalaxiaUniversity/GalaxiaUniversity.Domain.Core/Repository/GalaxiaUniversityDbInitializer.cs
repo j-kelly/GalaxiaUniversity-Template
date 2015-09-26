@@ -2,14 +2,10 @@ namespace GalaxiaUniversity.Domain.Core.Repository
 {
     using Entities;
     using NRepository.EntityFramework;
-    using System.Data.Entity;
+    using System.Data.Entity.Migrations;
 
-    internal sealed class GalaxiaUniversityDbInitializer : CreateDatabaseIfNotExists<GalaxiaUniversityDbContext>
+    internal sealed class GalaxiaUniversityDbInitializer : DbMigrationsConfiguration<GalaxiaUniversityDbContext>
     {
-        public GalaxiaUniversityDbInitializer()
-        {
-        }
-
         protected override void Seed(GalaxiaUniversityDbContext context)
         {
             var countries = new[]
