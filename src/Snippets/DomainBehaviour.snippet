@@ -3,7 +3,7 @@
   <CodeSnippet Format="1.0.0">
     <Header>
       <Title>Behaviour implementation boilerplate</Title>
-      <Shortcut>curservice_single_class</Shortcut>
+      <Shortcut>GalaxiaUniversity_behaviour</Shortcut>
       <Description></Description>
       <Author>JK</Author>
       <SnippetTypes>
@@ -19,17 +19,20 @@
         </Literal>
       </Declarations>
       <Code Language="csharp">
-        <![CDATA[    using GalaxiaUniversity.Core.Domain;
+        <![CDATA[ 
+
+    using GalaxiaUniversity.Core.Domain;
     using GalaxiaUniversity.Core.Domain.ContextualValidation;
     using GalaxiaUniversity.Core.Domain.InvariantValidation;
     using NRepository.Core;
     using System;
     using System.ComponentModel.DataAnnotations;
 
+ 
     // ************************************************************************************************
     // * Place this in the GalaxiaUniversity.Domain.AppServices.Tests/xxxxxApplicationServiceTests folder 
     // * **********************************************************************************************
-/* 
+    #region Test Class
     using GalaxiaUniversity.Core.Domain.ContextualValidation;
     using NRepository.TestKit;
     using NUnit.Framework;
@@ -80,12 +83,13 @@
         {
         }
     }
-*/    
+    #endregion
+  
 
     // ************************************************************************************************
     // * Place this in the Domain.AppServices/xxxApplicationService folder
     // * **********************************************************************************************  
-    // Request Handler
+    #region  Request Handler
     [GenerateTestFactory]
     public class $behaviour$Handler
     {
@@ -133,6 +137,7 @@
 
     //    return retVal;
     //}
+    #endregion
 
     public class $behaviour$
     {

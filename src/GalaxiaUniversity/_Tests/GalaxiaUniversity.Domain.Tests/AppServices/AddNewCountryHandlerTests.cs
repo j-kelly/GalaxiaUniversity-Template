@@ -30,7 +30,7 @@
                 serviceUnderTest.Handle(request);
             };
 
-            Assert2.CheckInvariantValidation("CountryName cannot be null", () => CallSut(CreateValidRequest(p => p.CommandModel.CountryName = null)));
+            Assert2.CheckInvariantValidation("CountryName cannot be null", () => CallSut(CreateValidRequest(p => p.CommandModel.Name = null)));
         }
 
         [Test]
@@ -44,7 +44,7 @@
             };
 
 
-            var invalidRequest = CreateValidRequest(p => p.CommandModel.CountryName = "China", p => p.CommandModel.Population = 9);
+            var invalidRequest = CreateValidRequest(p => p.CommandModel.Name = "China", p => p.CommandModel.Population = 9);
             Assert2.CheckContextualValidation("Population", "Really? I think we all know China has a bigger population than that.", () => CallSut(invalidRequest));
         }
 

@@ -62,22 +62,55 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="TechTalk.SpecFlow, Version=1.9.0.77, Culture=neutral, PublicKeyToken=0778194805d6db41, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\SpecFlow.1.9.0\lib\net35\TechTalk.SpecFlow.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Utility.Logging, Version=1.4.2.3, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Utility.Logging.1.4.2.3\lib\net40\Utility.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebDriver, Version=2.47.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Selenium.WebDriver.2.47.0\lib\net40\WebDriver.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=2.47.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Selenium.Support.2.47.0\lib\net40\WebDriver.Support.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scaffolding\AddedEntityInfo.cs" />
+    <Compile Include="Scaffolding\ColumnHeaderMapping.cs" />
+    <Compile Include="Scaffolding\Data\DataGeneration.cs" />
+    <Compile Include="Scaffolding\Host.cs" />
+    <Compile Include="Scaffolding\HostManager.cs" />
+    <Compile Include="Scaffolding\IisExpressHelper.cs" />
+    <Compile Include="Scaffolding\Page.cs" />
+    <Compile Include="Steps\ActionSteps.cs" />
+    <Compile Include="Steps\CreationSteps.cs" />
+    <Compile Include="Steps\ExpectationSteps.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="Scaffolding\packages.config" />
+    <None Include="Scaffolding\WebDriver\MicrosoftFixit50642.msi" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scaffolding\WebDriver\chromedriver.exe" />
+    <Content Include="Scaffolding\WebDriver\IEDriverServer32bit.exe" />
+    <Content Include="Scaffolding\WebDriver\IEDriverServer64bit.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Features\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

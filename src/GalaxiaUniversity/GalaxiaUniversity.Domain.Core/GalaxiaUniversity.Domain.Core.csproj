@@ -62,7 +62,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Behaviours\ExamplesApplicationService\AddNewCountry.cs" />
+    <Compile Include="Behaviours\ExamplesApplicationService\EditCountry.cs" />
     <Compile Include="Behaviours\IExamplesApplicationService.cs" />
+    <Compile Include="Repository\Containers\EntityStateWrapper.cs" />
+    <Compile Include="Repository\Containers\EntityStateWrapper%271.cs" />
+    <Compile Include="Repository\Containers\EntityStateWrapperContainer.cs" />
+    <Compile Include="Repository\Containers\IState.cs" />
+    <Compile Include="Repository\Containers\State.cs" />
     <Compile Include="Repository\Migrations\201509171636400_Initial.cs" />
     <Compile Include="Repository\Migrations\201509171636400_Initial.Designer.cs">
       <DependentUpon>201509171636400_Initial.cs</DependentUpon>

@@ -6,6 +6,7 @@
     using GalaxiaUniversity.Core.Logging;
     using GalaxiaUniversity.Domain.Core.Behaviours;
     using NRepository.Core;
+    using System.Threading.Tasks;
     using Utility.Logging;
 
     [GenerateTestFactory]
@@ -17,6 +18,11 @@
         public ExamplesApplicationService(IRepository repository)
         {
             _Repository = repository;
+        }
+
+        public async Task<AddNewCountry.Response> AddNewCountryAsync(AddNewCountry.Request request)
+        {
+            return await Task.Run(() => AddNewCountry(request));
         }
 
         public AddNewCountry.Response AddNewCountry(AddNewCountry.Request request)

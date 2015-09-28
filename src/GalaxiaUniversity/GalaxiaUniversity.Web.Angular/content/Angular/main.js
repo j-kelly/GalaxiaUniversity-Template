@@ -6,6 +6,11 @@ app.config(['$routeProvider', function ($routeProvider) {
         title: 'Index',
         controller: function () { },
         templateUrl: 'content/angular/features/FrontPage/index.html',
+    }).when('/Countries', {
+        title: 'Countries',
+        controller: 'CountriesController',
+        templateUrl: 'content/angular/features/Countries/index.html',
+        caseInsensitiveMatch: true
     }).when('/Products', {
         title: 'Products',
         controller: 'productsController',
@@ -44,9 +49,9 @@ app.factory('WebApi', function ($http) {
           error(onFailure);
     };
 
-    factory.saveStuff = function (commandModel, onSuccess, onFailure) {
+    factory.submit = function (url, commandModel, onSuccess, onFailure) {
         $http.post(
-          urlBase + 'SaveStuff',
+          url,
           JSON.stringify(commandModel), { headers: { 'Content-Type': 'application/json' } }).
           success(onSuccess).
           error(onFailure);

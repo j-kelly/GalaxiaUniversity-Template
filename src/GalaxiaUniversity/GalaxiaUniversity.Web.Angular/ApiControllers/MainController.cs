@@ -42,22 +42,6 @@
 
             return Request.CreateResponse(HttpStatusCode.OK, data);
         }
-
-
-        [Route("SaveStuff")]
-        [HttpPost]
-        public IHttpActionResult SaveStuff(Stuff stuff)
-        {
-            Logger.Debug("SaveStuff called");
-
-            return Ok();
-        }
-    }
-
-    public class Stuff
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
     }
 }
 

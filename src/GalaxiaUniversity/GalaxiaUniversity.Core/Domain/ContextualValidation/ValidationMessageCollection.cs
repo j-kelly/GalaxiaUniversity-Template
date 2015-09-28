@@ -53,5 +53,10 @@ namespace GalaxiaUniversity.Core.Domain.ContextualValidation
         {
             Add(new ValidationMessage(propertyName, errorMessage, validationLevel));
         }
+
+        public IEnumerable<KeyValuePair<string, string>> AsKeyValuePairs()
+        {
+            return this.Select(p => new KeyValuePair<string, string>(p.PropertyName, p.ErrorMessage));
+        }
     }
 }

@@ -15,7 +15,7 @@
         {
             [Required]
             [StringLength(50, MinimumLength = 3)]
-            public string CountryName { get; set; }
+            public string Name { get; set; }
 
             [Range(1, int.MaxValue)]
             public int Population { get; set; }
@@ -39,10 +39,13 @@
         //
         public class Response : DomainResponse
         {
-            public Response(ValidationMessageCollection validationDetails = null)
+            public Response(int? id = null, ValidationMessageCollection validationDetails = null)
                 : base(validationDetails)
             {
+                Id = id;
             }
+
+            public int? Id { get; }
         }
 
         //
@@ -53,11 +56,6 @@
             public InvariantValidation(Request context)
                 : base(context)
             {
-            }
-
-            public override void ValidateCommandModel()
-            {
-                Assert(Context.CommandModel.CountryName != null, "CountryName cannot be null");
             }
         }
 
@@ -73,7 +71,7 @@
 
             public override void Validate()
             {
-                if (Context.CommandModel.CountryName == "China" && Context.CommandModel.Population < 10)
+                if (Context.CommandModel.Name == "China" && Context.CommandModel.Population < 10)
                     Validate(false, nameof(Context.CommandModel.Population), "Really? I think we all know China has a bigger population than that.");
             }
         }

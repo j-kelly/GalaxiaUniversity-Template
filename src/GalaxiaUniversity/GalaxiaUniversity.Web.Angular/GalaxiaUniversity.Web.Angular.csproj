@@ -204,6 +204,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApiControllers\CountryController.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="ApiControllers\MainController.cs" />
@@ -214,6 +215,8 @@
     <Compile Include="App_Start\Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="content\Angular\features\Countries\controller.js" />
+    <Content Include="content\Angular\features\Countries\index.html" />
     <Content Include="content\Angular\masterPage\navBar.html" />
     <Content Include="content\Angular\features\Books\index.html" />
     <Content Include="content\Angular\features\Books\controller.js" />
@@ -223,6 +226,9 @@
     <Content Include="content\Angular\masterPage\master.html" />
     <Content Include="content\Angular\masterPage\masterController.js" />
     <Content Include="content\Angular\main.js" />
+    <Content Include="content\Angular\templates\guNumberBox.html" />
+    <Content Include="content\Angular\templates\guTextBox.html" />
+    <Content Include="content\Angular\templates\template.js" />
     <Content Include="Global.asax" />
     <Content Include="gulpfile.js" />
     <Content Include="Index.html" />
@@ -260,7 +266,6 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="content\Angular\templates\" />
     <Folder Include="_Infrastructure\Extensions\" />
     <Folder Include="_Infrastructure\Helpers\" />
   </ItemGroup>
