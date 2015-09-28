@@ -1,14 +1,36 @@
 ﻿<div ng-controller="masterController" ng-init="initialise()">
     <div id="alert-container"></div>
 
-    <div ng-include="'content/angular/masterPage/navBar.html'"></div>
+    <!-- NAV-BAR & SIDE_BAR QUICKLY HACKED TO GET WORKING -->
+    <div id="wrapper">
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav nav-pills nav-stacked" id="menu">
 
-    <ng-view></ng-view>
+                <li class="active">
+                    <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-database fa-stack-1x "></i></span>Crm</a>
+                    <ul class="nav-pills nav-stacked" style="list-style-type:none;">
+                        <li><a href="#/crm/reminders">Remiders</a></li>
+                        <li><a href="#/crm/alerts">Alerts <span class="badge">4</span></a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><span class="fa-stack fa-lg pull-left"><i class="fa fa-calendar fa-stack-1x "></i></span>Tasks</a>
+                    <ul class="nav-pills nav-stacked" style="list-style-type:none;">
+                        <li><a href="#/tasks/1"><span class="fa-stack fa-lg pull-left"><i class="fa fa-flag fa-stack-1x "></i></span>Task 1</a></li>
+                        <li><a href="#/tasks/2"><span class="fa-stack fa-lg pull-left"><i class="fa fa-flag fa-stack-1x "></i></span>Task 2</a></li>
+                    </ul>
+                </li>
 
-    <div>
-        <ul>
-            <li ng-repeat="country in main.countries | filter:main.filter">{{country.name}} ({{country.population}})</li>
-        </ul>
+                <li><a href="#/enquires"><span class="fa-stack fa-lg pull-left"><i class="fa fa-users fa-stack-1x "></i></span>Clients</a></li>
+                <li><a href="#/clients"><span class="fa-stack fa-lg pull-left"><i class="fa fa-cloud-download fa-stack-1x "></i></span>Enquires</a></li>
+                <li><a href="#/bookings"> <span class="fa-stack fa-lg pull-left"><i class="fa fa-paper-plane fa-stack-1x "></i></span>Bookings</a></li>
+                <li><a href="#/settings"><span class="fa-stack fa-lg pull-left"><i class="fa fa-cogs fa-stack-1x "></i></span>Settings</a></li>
+                <li><a href="#/admin"><span class="fa-stack fa-lg pull-left"><i class="fa fa-wrench fa-stack-1x "></i></span>Admin</a></li>
+            </ul>
+        </div>
+
+        <div id="page-content-wrapper">
+            <ng-view></ng-view>
+        </div>
     </div>
-
 </div>

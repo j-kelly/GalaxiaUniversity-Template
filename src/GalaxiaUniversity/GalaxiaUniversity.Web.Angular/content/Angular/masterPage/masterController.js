@@ -21,10 +21,7 @@ app.controller('masterController', ['$scope', '$routeParams', '$cookies', 'WebAp
             function (data) { $scope.main = data; },
             function () { alert('failed'); })
 
-        var cookies = $cookies.getAll();
-        angular.forEach(cookies, function (v, k) {
-            $cookies.remove(k);
-        });
+        $scope.initMenu();
     }
 
     // debugger func
@@ -41,4 +38,23 @@ app.controller('masterController', ['$scope', '$routeParams', '$cookies', 'WebAp
 
         $('#alert-container').append(alertHtml);
     };
+
+    $scope.initMenu = function () {
+        $('#menu ul').hide();
+        $('#menu ul').children('.current').parent().show();
+        //$('#menu ul:first').show();
+        $('#menu li a').click(
+          function () {
+              var checkElement = $(this).next();
+              if ((checkElement.is('ul')) && (checkElement.is(':visible'))) {
+                  return false;
+              }
+              if ((checkElement.is('ul')) && (!checkElement.is(':visible'))) {
+                  $('#menu ul:visible').slideUp('normal');
+                  checkElement.slideDown('normal');
+                  return false;
+              }
+          });
+    };
+
 }]);

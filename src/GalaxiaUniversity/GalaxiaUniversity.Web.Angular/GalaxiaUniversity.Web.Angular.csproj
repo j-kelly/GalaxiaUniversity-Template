@@ -215,27 +215,38 @@
     <Compile Include="App_Start\Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="content\Angular\features\Countries\controller.js" />
-    <Content Include="content\Angular\features\Countries\index.html" />
+    <Content Include="content\Angular\features\Bookings\index.html" />
+    <Content Include="content\Angular\features\Clients\index.html" />
+    <Content Include="content\Angular\features\Tasks\controller.js" />
+    <Content Include="content\Angular\features\_old\Countries\controller.js" />
+    <Content Include="content\Angular\features\_old\Countries\index.html" />
+    <Content Include="content\Angular\features\Crm\Pages\reminders.html" />
+    <Content Include="content\Angular\features\Crm\Pages\alerts.html" />
+    <Content Include="content\Angular\features\Enquires\index.html" />
+    <Content Include="content\Angular\features\Admin\index.html" />
+    <Content Include="content\Angular\features\Settings\index.html" />
     <Content Include="content\Angular\masterPage\navBar.html" />
-    <Content Include="content\Angular\features\Books\index.html" />
-    <Content Include="content\Angular\features\Books\controller.js" />
+    <Content Include="content\Angular\features\Crm\index.html" />
+    <Content Include="content\Angular\features\Crm\controller.js" />
     <Content Include="content\Angular\features\FrontPage\index.html" />
-    <Content Include="content\Angular\features\Products\controller.js" />
-    <Content Include="content\Angular\features\Products\index.html" />
+    <Content Include="content\Angular\features\Tasks\index.html" />
     <Content Include="content\Angular\masterPage\master.html" />
     <Content Include="content\Angular\masterPage\masterController.js" />
     <Content Include="content\Angular\main.js" />
+    <Content Include="content\Angular\masterPage\Sidebar.html" />
     <Content Include="content\Angular\templates\guNumberBox.html" />
     <Content Include="content\Angular\templates\guTextBox.html" />
     <Content Include="content\Angular\templates\template.js" />
+    <Content Include="content\SideNav.css" />
     <Content Include="Global.asax" />
     <Content Include="gulpfile.js" />
+    <Content Include="HtmlPage1.html" />
     <Content Include="Index.html" />
     <Content Include="content\Site.css" />
     <Content Include="bower.json" />
     <Content Include="package.json" />
     <None Include="scripts\_references.js" />
+    <Content Include="scripts\SideBar.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

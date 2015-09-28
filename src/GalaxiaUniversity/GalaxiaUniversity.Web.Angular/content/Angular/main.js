@@ -1,33 +1,41 @@
 ﻿var app = angular.module('myApp', ['ngRoute', 'ngResource', 'ngCookies']);
 
 app.config(['$routeProvider', function ($routeProvider) {
-
     $routeProvider.when('/', {
         title: 'Index',
         controller: function () { },
         templateUrl: 'content/angular/features/FrontPage/index.html',
-    }).when('/Countries', {
-        title: 'Countries',
-        controller: 'CountriesController',
-        templateUrl: 'content/angular/features/Countries/index.html',
+    }).when('/crm', {
+        controller: 'CrmController',
+        templateUrl: 'content/angular/features/Crm/index.html',
         caseInsensitiveMatch: true
-    }).when('/Products', {
-        title: 'Products',
-        controller: 'productsController',
-        templateUrl: 'content/angular/features/Products/index.html',
+    }).when('/crm/:section', {
+        controller: 'CrmController',
+        templateUrl: 'content/angular/features/Crm/index.html',
         caseInsensitiveMatch: true
-    }).when('/Products/:code', {
-        title: 'Products',
-        controller: 'productsController',
-        templateUrl: 'content/angular/features/Products/index.html',
+    }).when('/bookings', {
+        controller: function () { },
+        templateUrl: 'content/angular/features/bookings/index.html',
         caseInsensitiveMatch: true
-    }).when('/Books', {
-        controller: 'bookController',
-        templateUrl: 'content/angular/features/Books/index.html',
+    }).when('/admin', {
+        controller: function () { },
+        templateUrl: 'content/angular/features/admin/index.html',
         caseInsensitiveMatch: true
-    }).when('/Books/:isbn', {
-        controller: 'bookController',
-        templateUrl: 'content/angular/features/Books/index.html',
+    }).when('/enquires', {
+        controller: function () { },
+        templateUrl: 'content/angular/features/enquires/index.html',
+        caseInsensitiveMatch: true
+    }).when('/settings', {
+        controller: function () { },
+        templateUrl: 'content/angular/features/settings/index.html',
+        caseInsensitiveMatch: true
+    }).when('/clients', {
+        controller: function () { },
+        templateUrl: 'content/angular/features/clients/index.html',
+        caseInsensitiveMatch: true
+    }).when('/tasks/:taskId', {
+        controller: 'TaskController',
+        templateUrl: 'content/angular/features/tasks/index.html',
         caseInsensitiveMatch: true
     }).otherwise({ redirectTo: '/' });
 }]);
@@ -36,7 +44,6 @@ app.config(['$routeProvider', function ($routeProvider) {
 app.run(['$route', function ($route) {
     $route.reload();
 }]);
-
 
 app.factory('WebApi', function ($http) {
 

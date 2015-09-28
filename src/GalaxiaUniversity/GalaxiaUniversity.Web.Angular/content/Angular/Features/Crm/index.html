@@ -1,0 +1,10 @@
+﻿<div ng-controller="CrmController">
+    <div class="jumbotron">
+        <h1>CRM</h1>
+        <p>Blah Blah Blah</p>
+    </div>
+
+    <div ng-if="page == 'reminders'" ng-include="'content/angular/features/crm/pages/reminders.html'"></div>
+    <div ng-if="page == 'alerts'" ng-include="'content/angular/features/crm/pages/alerts.html'" ></div>
+
+</div>

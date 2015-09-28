@@ -4,19 +4,34 @@
 
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css" />
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
 
     <!-- My stuff-->
     <link href="/Content/Site.css" rel="stylesheet" />
+    <link href="content/SideNav.css" rel="stylesheet" />
 
     <meta charset="utf-8" />
 
 </head>
 <body>
 
-    <div class="container">
-        <div ng-include="'/content/angular/masterPage/master.html'"></div>
-    </div>
+    <nav class="navbar navbar-default no-margin">
+        <ul class="nav navbar-nav">
+            <li class="active"><button class="navbar-toggle collapse in" data-toggle="collapse" id="menu-toggle-2"> <span class="glyphicon glyphicon-th-large" aria-hidden="true"></span></button></li>
+        </ul>
 
+        <a class="navbar-brand" href="#/">Northwind</a>
+ 
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Page 1</a></li>
+            <li><a href="#">Page 2</a></li>
+            <li><a href="#">Page 3</a></li>     <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+    </nav>
+
+
+    <div ng-include="'/content/angular/masterPage/master.html'"></div>
 
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
@@ -30,8 +45,9 @@
     <script src="Content/Angular/templates/template.js"></script>
 
     <script src="Content/Angular/masterPage/masterController.js" ng-module="myApp"></script>
-    <script src="Content/Angular/Features/Books/controller.js" ng-module="myApp"></script>
-    <script src="Content/Angular/Features/Products/controller.js" ng-module="myApp"></script>
-    <script src="Content/Angular/Features/Countries/controller.js" ng-module="myApp"></script>
+    <script src="content/Angular/features/Crm/controller.js"></script>
+    <script src="content/Angular/features/Tasks/controller.js"></script>
+
+    <script src="scripts/SideBar.js"></script>
 </body>
 </html>
