@@ -30,7 +30,7 @@
                 items = Cache.Get(key);
                 if (items == null)
                 {
-                    // if your not generating proxies you can use the following :
+                    // if you're not generating proxies you can use the following :
                     // items = repository.GetEntities<T>(new AsNoTrackingQueryStrategy(),this).ToArray().AsQueryable();
 
                     // Required so you don't put proxied entities into the cache (
