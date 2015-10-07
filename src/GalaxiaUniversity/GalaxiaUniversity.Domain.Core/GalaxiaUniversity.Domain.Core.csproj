@@ -61,9 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Behaviours\ExamplesApplicationService\AddNewCountry.cs" />
-    <Compile Include="Behaviours\ExamplesApplicationService\EditCountry.cs" />
-    <Compile Include="Behaviours\IExamplesApplicationService.cs" />
+    <Compile Include="Behaviours\Country\CountryCreate.cs" />
     <Compile Include="Repository\Containers\EntityStateWrapper.cs" />
     <Compile Include="Repository\Containers\EntityStateWrapper%271.cs" />
     <Compile Include="Repository\Containers\EntityStateWrapperContainer.cs" />

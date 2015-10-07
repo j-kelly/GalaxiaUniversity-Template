@@ -205,6 +205,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApiControllers\CountryController.cs" />
+    <Compile Include="App_Start\DomainBootstrapper.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="ApiControllers\MainController.cs" />
@@ -249,9 +250,9 @@
       <Project>{0db43215-e96e-443e-a8ac-1c204f53b057}</Project>
       <Name>GalaxiaUniversity.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\GalaxiaUniversity.Domain.AppServices\GalaxiaUniversity.Domain.AppServices.csproj">
+    <ProjectReference Include="..\GalaxiaUniversity.Domain.AppServices\GalaxiaUniversity.Domain.Services.csproj">
       <Project>{089744de-fe24-4cd6-85a2-daafc4c27fe1}</Project>
-      <Name>GalaxiaUniversity.Domain.AppServices</Name>
+      <Name>GalaxiaUniversity.Domain.Services</Name>
     </ProjectReference>
     <ProjectReference Include="..\GalaxiaUniversity.Domain.Core\GalaxiaUniversity.Domain.Core.csproj">
       <Project>{3cc91b56-46df-431a-bc6a-c7b365fca2a9}</Project>

@@ -4,7 +4,7 @@
 <#@ assembly name="$(ProjectDir)\bin\debug\GalaxiaUniversity.Web.Core.dll" #>
 <#@ assembly name="$(ProjectDir)\bin\debug\GalaxiaUniversity.Web.Angular.dll" #>
 <#@ assembly name="$(ProjectDir)\bin\debug\GalaxiaUniversity.Domain.Core.dll" #>
-<#@ assembly name="$(ProjectDir)\bin\debug\GalaxiaUniversity.Domain.AppServices.dll" #>
+<#@ assembly name="$(ProjectDir)\bin\debug\GalaxiaUniversity.Domain.Services.dll" #>
 <#@ assembly name="$(ProjectDir)..\..\..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll" #>
 <#@ assembly name="$(ProjectDir)..\..\..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll" #>
 <#@ import namespace="System" #>
@@ -17,7 +17,7 @@
 <#
 	var assemblies = new[]
     {
-        typeof(GalaxiaUniversity.Domain.AppServices.Services.ExamplesHandlers.AddNewCountryHandler).Assembly,
+        typeof(GalaxiaUniversity.Domain.AppServices.Handlers.CountryHandlers).Assembly,
         typeof(GalaxiaUniversity.Web.Angular.Controllers.MainController).Assembly,
     };
 try

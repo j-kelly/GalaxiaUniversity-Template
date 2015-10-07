@@ -47,6 +47,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Annotations\GenerateTestFactoryAttribute.cs" />
+    <Compile Include="Domain\DomainServices.cs" />
+    <Compile Include="Domain\IDomainRequest.cs" />
+    <Compile Include="Domain\IDomainResponse.cs" />
     <Compile Include="SystemPrincipal.cs" />
     <Compile Include="SystemDateTime.cs" />
     <Compile Include="Domain\ContextualValidation\ContextualValidation.cs" />

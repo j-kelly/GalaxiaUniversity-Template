@@ -1,22 +1,22 @@
 ﻿namespace GalaxiaUniversity.Domain.Tests.AppServices
 {
-    using Core.Behaviours.ExamplesApplicationService;
+    using Core.Behaviours.Country;
+    using Domain.AppServices.Handlers;
     using GalaxiaUniversity.Core.Domain.ContextualValidation;
     using NRepository.TestKit;
     using NUnit.Framework;
     using System;
     using System.Linq;
-    using TestKit.Factories;
 
     [TestFixture]
-    public class AddNewCountryHandlerTests
+    public class CountryCreateTests
     {
         // I Prefer to leave this class at the top so easy to see what contistutes a valid request object
-        private AddNewCountry.Request CreateValidRequest(params Action<AddNewCountry.Request>[] updates)
+        private CountryCreate.Request CreateValidRequest(params Action<CountryCreate.Request>[] updates)
         {
-            var commandModel = EntityGenerator.Create<AddNewCountry.CommandModel>();
+            var commandModel = EntityGenerator.Create<CountryCreate.CommandModel>();
 
-            var request = new AddNewCountry.Request("UserId", commandModel);
+            var request = new CountryCreate.Request("UserId", commandModel);
             updates.ToList().ForEach(func => func(request));
             return request;
         }
@@ -24,10 +24,9 @@
         [Test]
         public void CheckInvariantValidation()
         {
-            Action<AddNewCountry.Request> CallSut = request =>
+            Action<CountryCreate.Request> CallSut = request =>
             {
-                var serviceUnderTest = new AddNewCountryHandlerFactory().Object;
-                serviceUnderTest.Handle(request);
+                CountryHandlers.Handle(null, request);
             };
 
             Assert2.CheckInvariantValidation("CountryName cannot be null", () => CallSut(CreateValidRequest(p => p.CommandModel.Name = null)));
@@ -36,10 +35,10 @@
         [Test]
         public void CheckValidationRules()
         {
-            Func<AddNewCountry.Request, ValidationMessageCollection> CallSut = request =>
+            Func<CountryCreate.Request, ValidationMessageCollection> CallSut = request =>
             {
-                var serviceUnderTest = new AddNewCountryHandlerFactory().Object;
-                var reponse = serviceUnderTest.Handle(request);
+                var inMemoryRepository = new InMemoryRecordedRepository();
+                var reponse = CountryHandlers.Handle(inMemoryRepository, request);
                 return reponse.ValidationDetails;
             };
 
@@ -51,7 +50,7 @@
 
         // Add other tests here to prove it works
         [Test]
-        public void WhenAddNewCountryIsCalledThenIExpectItToDoSomething()
+        public void WhenCountryCreateIsCalledThenIExpectItToDoSomething()
         {
         }
     }

@@ -4,7 +4,7 @@ namespace GalaxiaUniversity.Core.Domain
     using GalaxiaUniversity.Core.Domain.InvariantValidation;
     using Utilities;
 
-    public abstract class DomainRequest<TCommandModel> : IDomainAssertable, IDomainValidatable<TCommandModel> where TCommandModel : class
+    public abstract class DomainRequest<TCommandModel> : IDomainRequest, IDomainAssertable, IDomainValidatable<TCommandModel> where TCommandModel : class
     {
         protected DomainRequest(string userId, TCommandModel commandModel)
         {

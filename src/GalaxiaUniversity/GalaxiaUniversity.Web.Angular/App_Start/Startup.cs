@@ -14,6 +14,8 @@ namespace GalaxiaUniversity.Web.Angular.App_Start
             LogManager.SetFactory(new NLogLoggerFactory());
 
             UnityConfig.RegisterComponents();
+
+            DomainBootstrapper.Initialise();
         }
     }
 }

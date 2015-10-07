@@ -9,90 +9,8 @@
 namespace GalaxiaUniversity.TestKit.Factories
 {
     using Moq;
-	using GalaxiaUniversity.Domain.AppServices.Services;
-	using GalaxiaUniversity.Domain.AppServices.Services.ExamplesHandlers;
-	using GalaxiaUniversity.Domain.Core.Behaviours;
 	using GalaxiaUniversity.Web.Angular.Controllers;
-	using NRepository.Core;
 	using NRepository.Core.Query;
-
-    // Auto generated
-	public partial class ExamplesApplicationServiceFactory
-	{
-        private readonly MockBehavior _MockBehaviour;
-
-		public ExamplesApplicationServiceFactory()
-            : this(MockBehavior.Default)
-        {
-		}
-
-		public ExamplesApplicationServiceFactory(MockBehavior mockBehaviour)
-        {
-			_MockBehaviour = mockBehaviour;
-
-        	RepositoryMock = new Mock<IRepository>(_MockBehaviour);
-		
-			Initalise();
-		}
-
-		partial void Initalise();
-
-		// IRepository
-		private IRepository _IRepository;
-        public Mock<IRepository> RepositoryMock { get; set; }
-        public IRepository _GetRepository() { return _IRepository ?? RepositoryMock.Object; }
-	    public IRepository _SetRepository(IRepository obj){ _IRepository = obj; return obj;}
-
-	    public ExamplesApplicationService  Object
-        {
-			get { return new ExamplesApplicationService(_GetRepository()); }
-		}
-
-		public void VerifyAll()
-        {
-			RepositoryMock.VerifyAll();
-		}
-	}
-
-
-    // Auto generated
-	public partial class AddNewCountryHandlerFactory
-	{
-        private readonly MockBehavior _MockBehaviour;
-
-		public AddNewCountryHandlerFactory()
-            : this(MockBehavior.Default)
-        {
-		}
-
-		public AddNewCountryHandlerFactory(MockBehavior mockBehaviour)
-        {
-			_MockBehaviour = mockBehaviour;
-
-        	RepositoryMock = new Mock<IRepository>(_MockBehaviour);
-		
-			Initalise();
-		}
-
-		partial void Initalise();
-
-		// IRepository
-		private IRepository _IRepository;
-        public Mock<IRepository> RepositoryMock { get; set; }
-        public IRepository _GetRepository() { return _IRepository ?? RepositoryMock.Object; }
-	    public IRepository _SetRepository(IRepository obj){ _IRepository = obj; return obj;}
-
-	    public AddNewCountryHandler  Object
-        {
-			get { return new AddNewCountryHandler(_GetRepository()); }
-		}
-
-		public void VerifyAll()
-        {
-			RepositoryMock.VerifyAll();
-		}
-	}
-
 
     // Auto generated
 	public partial class MainControllerFactory
@@ -109,7 +27,6 @@ namespace GalaxiaUniversity.TestKit.Factories
 			_MockBehaviour = mockBehaviour;
 
         	QueryRepositoryMock = new Mock<IQueryRepository>(_MockBehaviour);
-			ExamplesApplicationServiceMock = new Mock<IExamplesApplicationService>(_MockBehaviour);
 		
 			Initalise();
 		}
@@ -122,21 +39,14 @@ namespace GalaxiaUniversity.TestKit.Factories
         public IQueryRepository _GetQueryRepository() { return _IQueryRepository ?? QueryRepositoryMock.Object; }
 	    public IQueryRepository _SetQueryRepository(IQueryRepository obj){ _IQueryRepository = obj; return obj;}
 
-		// IExamplesApplicationService
-		private IExamplesApplicationService _IExamplesApplicationService;
-        public Mock<IExamplesApplicationService> ExamplesApplicationServiceMock { get; set; }
-        public IExamplesApplicationService _GetExamplesApplicationService() { return _IExamplesApplicationService ?? ExamplesApplicationServiceMock.Object; }
-	    public IExamplesApplicationService _SetExamplesApplicationService(IExamplesApplicationService obj){ _IExamplesApplicationService = obj; return obj;}
-
 	    public MainController  Object
         {
-			get { return new MainController(_GetQueryRepository(), _GetExamplesApplicationService()); }
+			get { return new MainController(_GetQueryRepository()); }
 		}
 
 		public void VerifyAll()
         {
 			QueryRepositoryMock.VerifyAll();
-			ExamplesApplicationServiceMock.VerifyAll();
 		}
 	}
 

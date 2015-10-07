@@ -1,7 +1,7 @@
 ﻿namespace GalaxiaUniversity.Web.Angular.ApiControllers
 {
-    using GalaxiaUniversity.Domain.Core.Behaviours;
-    using GalaxiaUniversity.Domain.Core.Behaviours.ExamplesApplicationService;
+    using Domain.Core.Behaviours.Country;
+    using GalaxiaUniversity.Core.Domain;
     using NRepository.Core.Query;
     using System;
     using System.Linq;
@@ -12,21 +12,18 @@
 
     public class CountryController : ApiController
     {
-        private readonly IExamplesApplicationService _AppService;
         private readonly IQueryRepository _QueryRepository;
 
-        public CountryController(IQueryRepository queryRepository, IExamplesApplicationService appService)
+        public CountryController(IQueryRepository queryRepository)
         {
             _QueryRepository = queryRepository;
-            _AppService = appService;
         }
 
         [HttpPost]
-        public async Task<HttpResponseMessage> AddCountry(AddNewCountry.CommandModel commandModel)
+        public async Task<HttpResponseMessage> AddCountry(CountryCreate.CommandModel commandModel)
         {
-            var response = await _AppService.AddNewCountryAsync(new AddNewCountry.Request(
-                SystemPrincipal.Name,
-                commandModel));
+            var request = new CountryCreate.Request(SystemPrincipal.Name, commandModel);
+            var response = await DomainServices.CallServiceAsync<CountryCreate.Response>(request);
 
             var keyPairs = response.ValidationDetails.AsKeyValuePairs();
             return Request.CreateResponse(HttpStatusCode.OK, new

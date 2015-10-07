@@ -1,7 +1,6 @@
 ﻿namespace GalaxiaUniversity.Web.Angular.Controllers
 {
     using Core.Repository.Projections;
-    using Domain.Core.Behaviours;
     using Domain.Core.Repository.Entities;
     using GalaxiaUniversity.Core.Annotations;
     using GalaxiaUniversity.Core.Logging;
@@ -20,11 +19,9 @@
         private static readonly ILogger Logger = LogManager.CreateLogger<MainController>();
 
         private readonly IQueryRepository _QueryRepository;
-        private readonly IExamplesApplicationService _ExamplesService;
 
-        public MainController(IQueryRepository queryRepository, IExamplesApplicationService examplesService)
+        public MainController(IQueryRepository queryRepository)
         {
-            _ExamplesService = examplesService;
             _QueryRepository = queryRepository;
         }
 

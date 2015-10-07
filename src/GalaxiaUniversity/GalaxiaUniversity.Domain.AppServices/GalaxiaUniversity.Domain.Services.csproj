@@ -7,8 +7,8 @@
     <ProjectGuid>{089744DE-FE24-4CD6-85A2-DAAFC4C27FE1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GalaxiaUniversity.Domain.AppServices</RootNamespace>
-    <AssemblyName>GalaxiaUniversity.Domain.AppServices</AssemblyName>
+    <RootNamespace>GalaxiaUniversity.Domain.Services</RootNamespace>
+    <AssemblyName>GalaxiaUniversity.Domain.Services</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -62,8 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\ExamplesApplicationService.cs" />
-    <Compile Include="Services\ExamplesHandlers\AddNewCountryHandler.cs" />
+    <Compile Include="Handlers\CountryHandlers.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

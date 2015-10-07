@@ -77,7 +77,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppServices\AddNewCountryHandlerTests.cs" />
+    <Compile Include="Country\CountryCreateTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -85,7 +85,7 @@
       <Project>{0db43215-e96e-443e-a8ac-1c204f53b057}</Project>
       <Name>GalaxiaUniversity.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\GalaxiaUniversity.Domain.AppServices\GalaxiaUniversity.Domain.AppServices.csproj">
+    <ProjectReference Include="..\..\GalaxiaUniversity.Domain.AppServices\GalaxiaUniversity.Domain.Services.csproj">
       <Project>{089744de-fe24-4cd6-85a2-daafc4c27fe1}</Project>
       <Name>GalaxiaUniversity.Domain.AppServices</Name>
     </ProjectReference>

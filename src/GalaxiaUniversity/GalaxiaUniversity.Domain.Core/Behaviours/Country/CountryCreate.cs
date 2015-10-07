@@ -1,15 +1,14 @@
-﻿namespace GalaxiaUniversity.Domain.Core.Behaviours.ExamplesApplicationService
+﻿namespace GalaxiaUniversity.Domain.Core.Behaviours.Country
 {
-
     using GalaxiaUniversity.Core.Domain;
     using GalaxiaUniversity.Core.Domain.ContextualValidation;
     using GalaxiaUniversity.Core.Domain.InvariantValidation;
     using System.ComponentModel.DataAnnotations;
 
-    public class AddNewCountry
+    public class CountryCreate
     {
         //
-        // AddNewCountry.CommandModel
+        // CountryCreate.CommandModel
         //
         public class CommandModel
         {
@@ -22,7 +21,7 @@
         }
 
         //
-        // AddNewCountry.Request
+        // CountryCreate.Request
         //
         public class Request : DomainRequest<CommandModel>
         {
@@ -35,7 +34,7 @@
         }
 
         //
-        // AddNewCountry.Response
+        // CountryCreate.Response
         //
         public class Response : DomainResponse
         {
@@ -49,7 +48,7 @@
         }
 
         //
-        // AddNewCountry.InvariantValidation
+        // CountryCreate.InvariantValidation
         //
         public class InvariantValidation : UserDomainRequestInvariantValidation<Request, CommandModel>
         {
@@ -60,7 +59,7 @@
         }
 
         //
-        // AddNewCountry.ContextualValidation
+        // CountryCreate.ContextualValidation
         //
         public class ContextualValidation : ContextualValidation<Request, CommandModel>
         {
