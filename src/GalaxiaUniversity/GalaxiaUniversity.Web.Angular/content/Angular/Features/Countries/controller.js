@@ -12,12 +12,13 @@ app.controller('CountriesController', ['$scope', 'WebApi', function ($scope, Web
 
                 if (data.ErrorMessages.length === 0) {
                     $scope.main.countries.push({ name: $scope.name, population: $scope.population});
-                    $scope.name = $scope.population = null;
                     
                     $scope.addAlert(
                         'success', 
                         'Record Added', 
                         $scope.name + ' has been successfully added to the database.(Id: ' + data.Id + ')');
+
+                    $scope.name = $scope.population = null;
                 }
                 else
                     alert(data.BigErrorMessage);

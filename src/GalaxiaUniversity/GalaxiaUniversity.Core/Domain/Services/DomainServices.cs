@@ -1,4 +1,4 @@
-﻿namespace GalaxiaUniversity.Core.Domain
+﻿namespace GalaxiaUniversity.Core.Domain.Services
 {
     using System;
     using System.Collections.Generic;
